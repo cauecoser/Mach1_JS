@@ -1,1 +1,0 @@
-console.log('Foram colados: ',(7*30-15))

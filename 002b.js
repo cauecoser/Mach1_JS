@@ -1,1 +1,0 @@
-console.log('Poderão ser guardadas: ',(2*12*4))
