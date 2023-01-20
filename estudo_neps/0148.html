@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cauê Coser">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Ímpar</title>
+</head>
+
+<body>
+    <div>
+        <a href="https://neps.academy/br/exercise/148" target="_blank">
+            <h2">ACESSE AQUI O EXERCÍCIO</h2>
+        </a>
+
+        <script>
+            let bino = Number(prompt('Insira a quantidade de dedos de Bino'))
+            let cino = Number(prompt('Insira a quantidade de dedos de Cino'))
+
+            if (bino > 10 || cino > 10 || bino < 0 || cino < 0) {
+                alert('Atenção! São utilizados apenas os 10 dedos das mãos!')
+            } else {
+                if ((bino + cino) % 2 == 0) {
+                    alert('Bino')
+                } else {
+                    alert('Cino')
+            }
+        }
+        </script>
+    </div>
+</body>
+
+</html>

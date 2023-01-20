@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cauê Coser">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flíper</title>
+</head>
+
+<body>
+    <div>
+        <a href="https://neps.academy/br/exercise/136" target="_blank">
+            <h2">ACESSE AQUI O EXERCÍCIO</h2>
+        </a>
+
+        <script>
+            let P = prompt('Digite a posição da porta P (0 para esquerda e 1 para direita):')
+            let R = prompt('Digite a posição da porta R (0 para esquerda e 1 para direita):')
+
+            if(P>1||P<0||R<0||R>1) {
+                alert('Não é possível utilizar outro número além de 0 e 1 para as portas.')
+            }
+
+            if (P==0) {
+                alert('O caminho selecionado foi o caminho C')
+            } else {
+                if(R==0) {
+                    alert('O caminho selecionado foi o caminho B')
+                } else {
+                    alert('O caminho selecionado foi o caminho A')
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
