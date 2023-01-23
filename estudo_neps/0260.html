@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cauê Coser">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gangorra</title>
+</head>
+
+<body>
+    <div>
+        <a href="https://neps.academy/br/exercise/260" target="_blank">
+            <h2">ACESSE AQUI O EXERCÍCIO</h2>
+        </a>
+
+        <script>
+            let informacoes = prompt(`Insira os dois (2) números de peso da criança e comprimento da gangorra para o lado 1 e, em seguida, os mesmos dois (2) dados para o lado 2.
+            
+ATENÇÃO:
+Todos os quatro (4) dados devem ser iunseridos de uma vez e devem ser separados por espaço. Exemplo: 20 30 40 50.`)
+
+
+            let array = informacoes.split(' ')
+
+            let confirmacao = confirm(`Os dados inseridos são ${array[0]}, ${array[1]}, ${array[2]} e ${array[3]}. Estão corretos?`)
+
+            if (confirmacao == 1) {
+                if (array[0] * array[1] > array[2] * array[3]) {
+                    alert('O lado 1 estará mais baixo.')
+                } else if (array[0] * array[1] < array[2] * array[3]) {
+                    alert('O lado 2 estará mais baixo.')
+                } else {
+                    alert('A gangorra estará equilibrada.')
+                }
+
+            } else {
+                window.location.reload()
+            }
+        </script>
+    </div>
+</body>
+
+</html>
