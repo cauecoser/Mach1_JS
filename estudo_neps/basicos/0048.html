@@ -16,16 +16,20 @@
         </a>
 
         <script>
-            let N = 1500
-            
-            let D1 = 5
-            let D2 = 100
-            let D3 = 99900
-            let D4 = 400000
-            let D5 = 500000
-            let D6 = 600000
+            let diasDaLista = prompt('Digite a quantidade de dias que a lista possui:')
+            if (diasDaLista>1000 || diasDaLista<1) {
+                alert('Atenção: O número de dias não deverá ser superior a 1000 nem inferior a 1.')
+            } else {
+                let acessos = Math.random()*Math.random()*Math.random()
+                let diasNecessarios = 0
 
+                for (i=0;N<1000000;i++) {
+                    let totalDeAcessos =+ acessos
+                    diasNecessarios++
+                }
 
+                alert(`O total de dias necessários para a página atingir 1.000.000 de acessos foi ${diasNecessarios}.`)
+            }
         </script>
     </div>
 </body>
