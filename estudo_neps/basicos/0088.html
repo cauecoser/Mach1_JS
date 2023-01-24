@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cauê Coser">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zerinho ou Um</title>
+</head>
+
+<body>
+    <div>
+        <a href="https://neps.academy/br/exercise/88" target="_blank">
+            <h2>ACESSE AQUI O EXERCÍCIO</h2>
+        </a>
+
+        <script>
+            let A = Math.floor(Math.random() * 2)
+            let B = Math.floor(Math.random() * 2)
+            let C = Math.floor(Math.random() * 2)
+
+
+            if (A == B && B !== C) {
+                alert(`Alice: ${A}, Beto: ${B} e Clara: ${C}. Clara.`)
+            } else if (A != B && A == C) {
+                alert(`Alice: ${A}, Beto: ${B} e Clara: ${C}. Beto.`)
+            } else if (A != B && B == C) {
+                alert(`Alice: ${A}, Beto: ${B} e Clara: ${C}. Alice.`)
+            } else {
+                alert(`Alice: ${A}, Beto: ${B} e Clara: ${C}. Não houve ganhador.`)
+            }
+        </script>
+    </div>
+</body>
+
+</html>

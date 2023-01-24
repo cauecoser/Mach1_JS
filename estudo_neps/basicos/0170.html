@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cauê Coser">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raízes</title>
+</head>
+
+<body>
+    <div>
+        <a href="https://neps.academy/br/exercise/170" target="_blank">
+            <h2>ACESSE AQUI O EXERCÍCIO</h2>
+        </a>
+
+        <script>
+            let N = prompt('Digite a quantidade de números dos quais deverão ser extraídos as raízes quadradas:')
+            let X = 0
+            let raiz = 0
+
+            if (N < 1 || N > 10000) {
+                alert('[ERRO] A quantidade de números não pode ser maior que 10.000 nem menor que 1.')
+            } else {
+                for (i = 1; i <= N; i++) {
+                    X = Math.floor(Math.random()*1000000000)
+                    raiz = Math.sqrt(X).toFixed(4)
+                    alert(`A raíz quadrada de ${X} é ${raiz}.`)
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
