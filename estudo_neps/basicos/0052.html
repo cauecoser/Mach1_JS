@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cauê Coser">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpadas</title>
+</head>
+
+<body>
+    <div>
+        <a href="https://neps.academy/br/exercise/52" target="_blank">
+            <h2>ACESSE AQUI O EXERCÍCIO</h2>
+        </a>
+
+        <script>
+            let N = prompt(`Digite o número de vezes que foram pressionados os interruptores.`)
+            let I1 = Math.floor(Math.random() * (N - 0) + 0)
+            let I2 = N - I1
+            let A = false
+            let B = false
+
+            if (N < 2 || N > 100000) {
+                alert('O número de vezes que os interruptores foram pressionados não pode ser menor que 2 nem maior que 100.000.')
+            } else {
+                for (i = 1; i <= I1; i++) {
+                    A = !A
+                }
+
+                for (i = 1; i <= I2; i++) {
+                    A = !A
+                    B = !B
+                }
+
+                let statusA = ''
+                let statusB = ''
+
+                if (A == true) {
+                    statusA = 'acesa'
+                } else {
+                    statusA = 'apagada'
+                }
+
+                if (B == true) {
+                    statusB = 'acesa'
+                } else {
+                    statusB = 'apagada'
+                }
+
+                alert(`O interruptor I1 foi pressionado ${I1} vezes e o interruptor I2 ${I2} vezes. Sendo assim a lâmpada A está ${statusA} e a lâmpada B está ${statusB}.`)
+            }
+        </script>
+    </div>
+</body>
+
+</html>

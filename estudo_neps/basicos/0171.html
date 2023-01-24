@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cauê Coser">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potências Simples</title>
+</head>
+
+<body>
+    <div>
+        <a href="https://neps.academy/br/exercise/171" target="_blank">
+            <h2>ACESSE AQUI O EXERCÍCIO</h2>
+        </a>
+
+        <script>
+            let X = prompt(`Digite o número da base:`)
+            let Y = prompt(`Digite o número da potência:`)
+            if (X < 0 || X > 10000 || Y < 1 || Y > 10 || X ** Y > 10000000000) {
+                alert('O valor de X deve ser maior ou igual a 0 e menor ou igual a 10.000; o de Y deve ser maior ou igual a 1 e menor ou igual a 10 e o valor da potência não deve ultrapassa 1.000.000.000.')
+            } else {
+                alert(`A potenciação de ${X} por ${Y} é ${(X**Y).toFixed(5)}.`)
+            }
+            window.location.reload()
+        </script>
+    </div>
+</body>
+
+</html>

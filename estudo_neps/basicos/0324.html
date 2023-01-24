@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cauê Coser">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garçom</title>
+</head>
+
+<body>
+    <div>
+        <a href="https://neps.academy/br/exercise/324" target="_blank">
+            <h2>ACESSE AQUI O EXERCÍCIO</h2>
+        </a>
+
+        <script>
+            let N = prompt('Digite o número de bandejas que o garçom em treinamento carregou:')
+            let L = 0
+            let C = 0
+            let totalCoposQuebrados = 0
+            if (N > 100 || N < 1) {
+                alert(' [ERRO] O número de bandejas que o garçom em treinamento pode levar é de no mínimo 1 e no máximo 100. Digite um valor válido.')
+                window.location.reload()
+            } else {
+                for (i = 1; i <= N; i++) {
+                    L = Math.floor(Math.random() * (50 - 0) + 0)
+                    C = Math.floor(Math.random() * (50 - 0) + 0)
+                    if (L > C) {
+                        totalCoposQuebrados += C
+                    }
+                }
+                alert(`O total de copos quebrados pelo garçom que levou ${N} bandejas em treinamento foi de ${totalCoposQuebrados}.`)
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>
