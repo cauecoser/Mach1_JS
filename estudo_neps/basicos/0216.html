@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cauê Coser">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Divisores</title>
+</head>
+
+<body>
+    <div>
+        <a href="https://neps.academy/br/exercise/216" target="_blank">
+            <h2>ACESSE AQUI O EXERCÍCIO</h2>
+        </a>
+
+        <script>
+            let N = prompt('Digite o números para o qual deseja encontrar os divisores:')
+            let divisores = []
+            if (N < 2 || N > 1000000000) {
+                alert('[ERRO] O número não pode ser menor que 2 nem maior que 1.000.000.000.')
+            } else {
+                for(i=1;i<=N;i++) {
+                    if (N%i==0) {
+                        divisores.push(i)
+                    }
+                }
+                alert(`O conjunto de divisores do númer ${N} é
+D(${N}) = {${divisores}}.`)
+            }
+        </script>
+    </div>
+</body>
+
+</html>
