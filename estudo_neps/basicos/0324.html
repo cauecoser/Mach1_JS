@@ -20,6 +20,7 @@
             let L = 0
             let C = 0
             let totalCoposQuebrados = 0
+
             if (N > 100 || N < 1) {
                 alert(' [ERRO] O número de bandejas que o garçom em treinamento pode levar é de no mínimo 1 e no máximo 100. Digite um valor válido.')
                 window.location.reload()
@@ -31,6 +32,7 @@
                         totalCoposQuebrados += C
                     }
                 }
+
                 alert(`O total de copos quebrados pelo garçom que levou ${N} bandejas em treinamento foi de ${totalCoposQuebrados}.`)
             }
 
