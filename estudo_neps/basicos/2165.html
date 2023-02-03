@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cauê Coser">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+</head>
+
+<body>
+    <div>
+        <a href="https://neps.academy/br/exercise/2165" target="_blank">
+            <h2>ACESSE AQUI O EXERCÍCIO</h2>
+        </a>
+
+        <script>
+            let entrada = ''
+            let X = Math.floor(Math.random() * (10000 - (-10000)) + (-10000))
+            console.log(X)
+
+            while (entrada != X) {
+
+                entrada = Number(prompt('Digite um número para tentar adivinhar o número que o computador sorteou:'))
+
+                if (entrada > 10000 || entrada < -10000) {
+                    alert('[ERRO] O número digitado não deve ser maior que 10.000 nem menor que -10.000.')
+                    window.location.reload()
+                }
+
+                if (entrada > X) {
+                    alert(`A entrada é MAIOR que o número sorteado.`)
+                } else if (entrada < X) {
+                    alert(`A entrada é MENOR que o número sorteado.`)
+                } else {
+                    alert(`PARABÉNS!!! O número sorteado pelo computador foi ${X}!`)
+                }
+            }
+
+            window.location.reload()
+        </script>
+    </div>
+</body>
+
+</html>
