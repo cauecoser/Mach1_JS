@@ -23,13 +23,13 @@ let validaSalario = (salario) => {
         if (salario <1903.99) {
             descontoDoSalario = 0
         } else if (salario>=1903.99 && salario<=2826.65) {
-            descontoDoSalario = 7.5/100*salario
+            descontoDoSalario = (7.5/100*salario)-142.80
         } else if (salario>=2826.66 && salario<=3751.05) {
-            descontoDoSalario = 15/100*salario
+            descontoDoSalario = (15/100*salario)-354.80
         } else if (salario>=3751.06 && salario<=4664.68) {
-            descontoDoSalario = 22.5/100*salario
+            descontoDoSalario = (22.5/100*salario)-636.13
         } else {
-            descontoDoSalario = 27.5/100*salario
+            descontoDoSalario = (27.5/100*salario)-869.36
         }
 
         alert(`O desconto do salário R$ ${salario} será de R$ ${descontoDoSalario.toFixed(2)}.`)
