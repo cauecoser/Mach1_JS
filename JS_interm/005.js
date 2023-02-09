@@ -1,7 +1,9 @@
 function validaCpf(cpf) {
-    while (isNaN(cpf) || cpf == '' || cpf.length != 11 || validaDigitoUm(cpf) == false || validaDigitoDois(cpf) == false) {
-        cpf = prompt('[ATENÇÃO] O valor não é válido. Digite um CPF com 11 dígitos, apenas números e incluindo os zeros que seja válido:')
-    } return true
+    if (isNaN(cpf) || cpf.length != 11 || validaDigitoUm(cpf) == false || validaDigitoDois(cpf) == false) {
+        return false
+    } else {
+        return true
+    }
 }
 
 function validaDigitoUm(cpf) {
@@ -57,18 +59,26 @@ function formataCpf(cpf) {
     return novoCpf
 }
 
-let listaCpfs = []
-let listaFinal = []
 
-for (c = 1; c <= 5; c++) {
-    let cpf = prompt(`Digite o ${c}º número de CPF com 11 dígitos, apenas números e incluindo os zeros que seja válido:`)
-    if (validaCpf(cpf)) {
+let listaCpfs = []
+
+let vaiContinuar = confirm(`Este software é responsável por consultar 5 números de CPF inseridos pelo usuário. Deseja continuar?`)
+
+if (vaiContinuar) {
+    for (c = 1; c <= 5; c++) {
+        let cpf = prompt(`Digite o ${c}º número de CPF:`)
         listaCpfs.push(cpf)
     }
-}
 
-for (x=0; x<listaCpfs.length; x++) {
-    listaFinal.push(formataCpf(listaCpfs[x]))
+    for (k = 0; k < listaCpfs.length; k++) {
+        if (validaCpf(listaCpfs[k])) {
+            alert(`O CPF ${formataCpf(listaCpfs[k])} É válido.`)
+        } else {
+            alert(`O CPF ${listaCpfs[k]} NÃO É válido.`)
+        }
+    }
+    
+} else {
+    alert('O usuário optou por não continuar com a análise. Obrigado por utilizar os sistemas X.')
+    window.location.reload()
 }
-
-alert(listaFinal)
