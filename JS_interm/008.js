@@ -18,7 +18,7 @@ console.log(filhosDeBody)
 console.log(checaNumeroDeElementosDoBody(filhosDeBody))
 
 // let paragrafosDoBody = document.querySelectorAll('p')
-let tagsPDoBody = document.querySelectorAll('p')
+let tagsPDoBody = document.body.querySelectorAll('p')
 console.log(tagsPDoBody)
 
 exibeTextosDosParagrafosDoBody(tagsPDoBody)

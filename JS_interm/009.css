@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    width: 300px;
+    height: 350px;
+    background-color: #00FFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+input {
+    width: 200px;
+    line-height: 32px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 5px 2px #AAA;
+    margin-bottom: 20px;
+    padding: 0;
+    text-indent: 8px;
+}
+
+.totalBackground {
+    background-color: #FF0A0A;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    height: 100vh;
+}
+
+.tituloDoFormulario {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.4em;
+    font-weight: bold;;
+}
+
+.unicButton {
+    width: 200px;
+    height: 36px;
+    background-color: #EFF61F;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 15px;
+}
