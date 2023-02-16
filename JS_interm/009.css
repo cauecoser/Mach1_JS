@@ -13,6 +13,7 @@ form {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
+    margin-top: 50px;
 }
 
 input {
@@ -30,8 +31,9 @@ input {
 .totalBackground {
     background-color: #FF0A0A;
     display: flex;
-    justify-content: center;
-    padding: 50px 0;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     height: 100vh;
 }
 
@@ -50,4 +52,29 @@ input {
     font-weight: bold;
     font-size: 1em;
     margin-top: 15px;
+}
+
+.MensagemDeConfirmação,
+.mensagemDeAtualização {
+    width: 300px;
+    height: 48px;
+    background-color: #6ffb65;
+    padding: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.mensagemDeAtualização {
+    height: 28px;
+    background-color: rgb(37, 37, 255);
+    color: #FFF;
+    font-weight: lighter;
+
+}
+
+.mensagemDeAtualização:hover {
+    cursor: pointer;
 }

@@ -12,20 +12,22 @@
 
 <body>
     <div class="totalBackground">
-        <form action="">
+        <form>
             <legend class="tituloDoFormulario">CADASTRO SIMPLES</legend>
 
             <label>Nome:<br>
-                <input type="text" id="nome" class="recebeNome">
+                <input type="text" id="nome" class="recebeNome" autocomplete="off">
             </label>
             <label>Sobrenome:<br>
-                <input type="text" id="sobrenome" class="recebeSobrenome">
+                <input type="text" id="sobrenome" autocomplete="off">
             </label>
             <label>CPF:<br>
-                <input type="text" id="cpf" class="recebeCPF">
+                <input type="text" id="cpf" autocomplete="off">
             </label>
-            <button type="" class="unicButton" id="unicButton">Validar</button>
+            <button type="button" class="unicButton" id="unicButton">Validar</button> 
+            <!-- ATENÇÃO COM O TYPE SUBMIT!!!! -->
         </form>
+
     </div>
     <script src="009.js"></script>
 </body>

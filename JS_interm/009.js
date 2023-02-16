@@ -62,13 +62,28 @@ function validaDigitoDois(cpf) {
     }
 }
 
+function atualizaPagina() {
+    window.location.reload()
+}
 
 let executarChecagens = (nome, sobrenome, cpf) => {
     if (checaPreenchimentoDosCampos(nome, sobrenome, cpf) == true) {
-        alert('Todos os campos foram preenchidos')
+        // alert('Todos os campos foram preenchidos')
         if (validaCpf(cpf.value) == true) {
-            alert('Parabéns! O seu cadastro foi realizado com sucesso!')
-            window.location.reload()
+            let MensagemDeConfirmação = document.createElement('div') 
+            MensagemDeConfirmação.setAttribute('class','MensagemDeConfirmação')
+            MensagemDeConfirmação.innerHTML = 'Parabéns!<br>Cadastro realizado com sucesso!'
+            let totalBackground = document.querySelector('.totalBackground')
+            totalBackground.appendChild(MensagemDeConfirmação)
+            setTimeout(() => {
+                let mensagemDeAtualização = document.createElement('div')
+                mensagemDeAtualização.setAttribute('class','mensagemDeAtualização')
+                mensagemDeAtualização.innerHTML = 'Clique aqui para atualizar a página.'
+                totalBackground.appendChild(mensagemDeAtualização)
+                mensagemDeAtualização.onclick = atualizaPagina
+            }, 2000);
+            // alert('Parabéns! O seu cadastro foi realizado com sucesso!')
+            // window.location.reload()
         } else {
             alert('[ERRO] O seu CPF não é válido. Insira um CPF válido para consulta.')
         }
@@ -84,4 +99,4 @@ let unicButton = document.querySelector('#unicButton')
 
 unicButton.onclick = () => {
     executarChecagens(nomeUsuario, sobrenomeUsuario, cpfUsuario)
-};
+}
