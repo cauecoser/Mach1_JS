@@ -24,9 +24,17 @@
             <label>Nome3:<br>
                 <input type="text" id="nome3">
             </label>
-            <button type="button" class="botaoSalvar" id="botaoSalvar">Salvar</button> 
-            <!-- ATENÇÃO COM O TYPE SUBMIT!!!! -->
+            <button type="button" class="botaoSalvar" id="botaoSalvar">Salvar</button>
+            <div id="exibeNomes">
+                <h5>NOMES PREENCHIDOS:</h5>
+                <p>Nome1: <span id="exibeNome1"></span></p>
+                <p>Nome2: <span id="exibeNome2"></span></p>
+                <p>Nome3: <span id="exibeNome3"></span></p>
+            </div>
         </form>
+        <div id="quadroEscuro" class="quadroEscuro invisivel">
+            <div id="quadroClaro"></div>
+        </div>
 
     </div>
     <script src="010.js"></script>
