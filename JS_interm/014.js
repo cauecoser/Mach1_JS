@@ -14,9 +14,17 @@ function listarUsuarios(lista) {
     })
 }
 
+// function comparaValores(obj) {
+//     if () {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
 //Função que executa pesquisa e monta a tabela com o resultado
 function pesquisar(lista) {
-    novaLista = lista.filter(function (obj) { return obj.id == textoPesquisa.value || obj.nome.toLowerCase() == textoPesquisa.value.toLowerCase() || obj.sexo.toLowerCase() == textoPesquisa.value.toLowerCase() || obj.idade == textoPesquisa.value || obj.email.toLowerCase() == textoPesquisa.value.toLowerCase()})
+    novaLista = lista.filter(obj => obj.id == textoPesquisa.value || obj.nome.toLowerCase().includes(textoPesquisa.value.toLowerCase()) || obj.sexo.toLowerCase().includes(textoPesquisa.value.toLowerCase()) || obj.idade == textoPesquisa.value || obj.email.toLowerCase().includes(textoPesquisa.value.toLowerCase()))
     resultado.innerHTML = ''
     formPesquisa.reset()
     listarUsuarios(novaLista)
