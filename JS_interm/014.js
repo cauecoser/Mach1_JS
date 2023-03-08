@@ -16,7 +16,7 @@ function listarUsuarios(lista) {
 
 //Função que executa pesquisa e monta a tabela com o resultado
 function pesquisar(lista) {
-    novaLista = lista.filter(function (obj) { return obj.nome.toLowerCase() == textoPesquisa.value.toLowerCase() })
+    novaLista = lista.filter(function (obj) { return obj.id == textoPesquisa.value || obj.nome.toLowerCase() == textoPesquisa.value.toLowerCase() || obj.sexo.toLowerCase() == textoPesquisa.value.toLowerCase() || obj.idade == textoPesquisa.value || obj.email.toLowerCase() == textoPesquisa.value.toLowerCase()})
     resultado.innerHTML = ''
     formPesquisa.reset()
     listarUsuarios(novaLista)
