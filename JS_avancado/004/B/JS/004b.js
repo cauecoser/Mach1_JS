@@ -1,11 +1,5 @@
-{
-    try {
-        console.log('Iniciando o processamento!')
-        throw new Error('ERRO FATAL')
-    } catch (e) {
-        console.error(e.message)
-    } finally {
-        console.log('Fim do processo.')
-    }
+import calcularJuros from "./MODULES/juros.mjs";
+import calcularMulta from "./MODULES/multa.mjs";
 
-}
+console.log(calcularJuros(1000, 20))
+console.log(calcularMulta(1000, 20))
