@@ -28,7 +28,6 @@ function criaContadorNumerico(n) {
     return contador;
 }
 
-
 class Avaliacao {
     tipo = ''
     note = 0
@@ -40,14 +39,14 @@ class Avaliacao {
     }
 }
 
-const aluno = new Aluno ('Pedro')
+const aluno0 = new Aluno ('Pedro')
 const aluno1 = new Aluno ('Lucas')
 
-const avaliacao = new Avaliacao ('Global')
+const avaliacao0 = new Avaliacao ('Global')
 const avaliacao1 = new Avaliacao ('Semestral')
 
-aluno.insereAvaliacao(avaliacao)
-aluno.insereAvaliacao(avaliacao1)
+aluno0.insereAvaliacao(avaliacao0)
+aluno0.insereAvaliacao(avaliacao1)
 
-console.log(aluno)
+console.log(aluno0)
 console.log(aluno1)
