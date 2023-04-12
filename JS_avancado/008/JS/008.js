@@ -1,4 +1,4 @@
-class product {
+class Product {
     #id
     name
     constructor(id, name) {
@@ -7,7 +7,7 @@ class product {
     }
 }
 
-class order {
+class Order {
     #id
     created
     #products = []
@@ -22,7 +22,7 @@ class order {
         if (productCode instanceof product) {
             this.#products.push(productCode)
         } else {
-            throw new Error ('O código informado não é válido!')
+            throw new Error('O código informado não é válido!')
         }
     }
 
@@ -31,7 +31,7 @@ class order {
     }
 }
 
-class orderStore extends order {
+class OrderStore extends Order {
     tableNumber
     constructor(id, data, products, tableNumber) {
         super(id, data, products)
@@ -40,5 +40,47 @@ class orderStore extends order {
 
     calculateShipping() {
         return 0
+    }
+}
+
+class Cliente {
+    #id
+    name
+    address
+    zipCode
+    active
+    constructor(id, name, address, zipCode, active) {
+        this.#id = id
+        this.name = name
+        this.address = address
+        this.zipCode ?? zipCode //isso funciona???
+        this.active = active
+    }
+
+}
+
+class OrderDelivery extends Order {
+    cliente
+    constructor(id, data, products, cliente = new Cliente) {
+        super(id, data, products)
+        if (cliente instanceof Cliente) {
+            this.cliente = cliente
+        } else {
+            throw new Error('Cliente informado inválido!')
+        }
+    }
+
+    calculateShipping(zip) {
+        const zip = null ?? this.cliente.zipCode
+        const zip1stNumber = zip.slice(0, 1)
+        if (zip1stNumber < 0) {
+            throw new Error('CEP Inválido!')
+        } else {
+            if (zip1stNumber < 5) {
+                return 5
+            } else {
+                return 10
+            }
+        }
     }
 }
