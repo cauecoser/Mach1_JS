@@ -19,7 +19,7 @@ class Order {
     }
 
     addProduct(productCode) {
-        if (productCode instanceof product) {
+        if (productCode instanceof Product) {
             this.#products.push(productCode)
         } else {
             throw new Error('O código informado não é válido!')
@@ -53,7 +53,7 @@ class Cliente {
         this.#id = id
         this.name = name
         this.address = address
-        this.zipCode ?? zipCode //isso funciona???
+        this.zipCode = zipCode 
         this.active = active
     }
 
@@ -71,7 +71,7 @@ class OrderDelivery extends Order {
     }
 
     calculateShipping(zip) {
-        const zip = null ?? this.cliente.zipCode
+        if (zip) this.cliente.zipCode = zip
         const zip1stNumber = zip.slice(0, 1)
         if (zip1stNumber < 0) {
             throw new Error('CEP Inválido!')
@@ -84,3 +84,5 @@ class OrderDelivery extends Order {
         }
     }
 }
+
+console.log(new OrderDelivery(1,new Date('2023-4-17'), new Product(1, 'copo'), new Cliente(1,'Joao','rua almeida 2000', '72100053', true)))
