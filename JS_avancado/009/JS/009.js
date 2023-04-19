@@ -2,7 +2,7 @@ let divLoading = document.querySelector('#loading')
 let divMensagem = document.querySelector('#mensagem')
 
 let cep = document.querySelector('#cep')
-let pagina = ''
+let url = ''
 
 let logradouro = document.querySelector('#logradouro')
 let bairro = document.querySelector('#bairro')
@@ -10,31 +10,37 @@ let uf = document.querySelector('#uf')
 
 let cepRequest = new XMLHttpRequest();
 
-cepRequest.open('GET', `https://cdn.apicep.com/file/apicep/61700-000.json`, true)
-
-cepRequest.onreadystatechange = () => {
-    console.log(cepRequest.readyState)  
-    // if (cep.value.trim().length == 0) {
-    //     alert('O CEP precisa ser preenchido!')
-    //     window.location.reload()
-    // }
+cepRequest.onreadystatechange = function () {
 
     if (cepRequest.readyState === 4) {
         if (cepRequest.status === 200) {
-                let resposta = JSON.parse(cepRequest.responseText)
-                console.log(resposta)
-                logradouro.innerHTML += `${resposta.city}`
-                bairro.innerHTML += `${resposta.city}`
-                uf.innerHTML += `${resposta.city}`
-        } 
-    else {
+            // alert('OK')
+            console.log(cepRequest.responseText)
+            let resposta = JSON.parse(cepRequest.responseText)
+            console.log(resposta)
+            logradouro.innerHTML = `${resposta.address}`
+            bairro.innerHTML = `${resposta.district}`
+            uf.innerHTML = `${resposta.city}`
+            escondeDiv(divMensagem,0.3)
+        }
+        else {
             divMensagem.style.display = 'block'
+            escondeDiv(divMensagem,1)
         }
     } else {
         if (cepRequest.readyState === 1) {
             divLoading.style.display = 'block'
+            escondeDiv(divLoading,0.5)
         }
     }
 }
 
-cep.addEventListener('click', () => cepRequest.send())
+function escondeDiv(div, time) {
+    setTimeout(() => {div.style.display = 'none'}, (time*1000));
+}
+
+cep.addEventListener('click', () => {
+    url = `https://cdn.apicep.com/file/apicep/${cep.value}.json`
+    cepRequest.open('GET', url, true)
+    cepRequest.send()
+})

@@ -1,22 +1,22 @@
 function listarUsuarios() {
-    listaUsuarios.forEach(usuario => {
+    listaUsuarios.forEach(obj => {
 
         let trTds = `
             <tr>
                 <td>
-                    ${usuario.id}
+                    ${obj.id}
                 </td>
                 <td>
-                    ${usuario.nome}
+                    ${obj.nome}
                 </td>
                 <td>
-                    ${usuario.sexo}
+                    ${obj.sexo}
                 </td>
                 <td>
-                    ${usuario.idade}
+                    ${obj.idade}
                 </td>
                 <td>
-                    ${usuario.email}
+                    ${obj.email}
                 </td>
             </tr>
         `
